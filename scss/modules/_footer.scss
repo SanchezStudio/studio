@@ -1,0 +1,44 @@
+/* ================================== */
+/* FOOTER */
+/* ================================== */
+footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  z-index: 2;
+}
+footer p {
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: .075em;
+}
+.social {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  &__items {
+    display: inline-block;
+    padding: 10px;
+  }
+  &__link {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    letter-spacing: 0.075rem;
+    text-transform: lowercase;
+    color: #fff;
+    text-decoration: none;
+    transition: 400ms ease;
+    &:visited,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+    &:hover { color: darken(#fff, 15%); }
+  }
+}

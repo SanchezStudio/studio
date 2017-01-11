@@ -4,4 +4,6 @@ html(lang="en")
 
   body
     block content
+    if path != '/'
+      include ./partials/_footer.jade
     script(src='/assets/js/app.js')
