@@ -203,11 +203,10 @@ footer p {
 .social {
   display: block;
   width: 100%;
-  margin: 0 0 10px;
+  margin: 0 0 5px;
   padding: 0; }
   .social__items {
-    display: inline-block;
-    padding: 10px; }
+    display: inline-block; }
   .social__link {
     display: block;
     padding: 5px;
@@ -216,6 +215,7 @@ footer p {
     text-transform: lowercase;
     color: #fff;
     text-decoration: none;
+    padding: 10px;
     transition: 400ms ease; }
     .social__link:visited, .social__link:active, .social__link:focus {
       color: #fff; }
