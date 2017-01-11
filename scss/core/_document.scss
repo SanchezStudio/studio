@@ -1,0 +1,25 @@
+/* ================================== */
+/* BASE */
+/* ================================== */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-size: 100%;
+  font-weight: 400;
+  font-family: 'Montserrat', 'Futura', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}

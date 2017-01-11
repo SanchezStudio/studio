@@ -1,0 +1,63 @@
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 0;
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50vh;
+    text-decoration: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover;
+    @include respond-to(mobile) {
+      width: 50%;
+      height: 100vh;
+      background-position: center 55%;
+    }
+    &--studio {
+      background-image: url('../images/splash/bryce-splash.jpg');
+    }
+    &--weddings {
+      background-image: url('../images/splash/kelsey-splash.jpg');
+    }
+    &:hover .splash__title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__title {
+    font-size: 12px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 25vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1000ms ease;
+    .touchevents & {
+      opacity: 1;
+      transform: none;
+    }
+    @include respond-to(mobile) {
+      padding-top: 45vh;
+    }
+  }
+  &__logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    @include respond-to(mobile) {
+      top: 45vh;
+      //width: 150px;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ================================== */
+/* BASE */
+/* ================================== */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+body {
+  font-size: 100%;
+  font-weight: 400;
+  font-family: 'Montserrat', 'Futura', 'Helvetica Neue', 'Helvetica', sans-serif; }
+
+img {
+  max-width: 100%;
+  vertical-align: top; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 0; }
+  .splash__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50vh;
+    text-decoration: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover; }
+    @media (min-width: 480px) {
+      .splash__item {
+        width: 50%;
+        height: 100vh;
+        background-position: center 55%; } }
+    .splash__item--studio {
+      background-image: url("../images/splash/bryce-splash.jpg"); }
+    .splash__item--weddings {
+      background-image: url("../images/splash/kelsey-splash.jpg"); }
+    .splash__item:hover .splash__title {
+      opacity: 1;
+      transform: translateY(0); }
+  .splash__title {
+    font-size: 12px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 25vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1000ms ease; }
+    .touchevents .splash__title {
+      opacity: 1;
+      transform: none; }
+    @media (min-width: 480px) {
+      .splash__title {
+        padding-top: 45vh; } }
+  .splash__logo {
+    position: absolute;
+    display: block;
+    width: 50px;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; }
+    @media (min-width: 480px) {
+      .splash__logo {
+        top: 45vh; } }
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/welcome/background.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center; }
+
+.welcome:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100vh;
+  margin-right: -0.025rem; }
+
+.welcome__inner {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  text-align: center;
+  width: 98%;
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.welcome__item {
+  display: block;
+  vertical-align: middle; }
+
+.welcome__item--logo {
+  margin-bottom: 25px; }
+
+.welcome__item--logo svg {
+  width: 150px; }
+
+.welcome__item--dot {
+  display: none;
+  font-size: 30px;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #fff;
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.welcome__item--title {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .8rem; }
+
+@media screen and (min-width: 680px) {
+  .welcome__item {
+    display: inline-block; }
+
+  .welcome__item--dot {
+    display: inline-block; }
+
+  .welcome__item--logo {
+    margin-bottom: 0; } }

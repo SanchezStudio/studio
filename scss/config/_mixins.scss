@@ -1,0 +1,24 @@
+$breakpoints: (
+  'mobile'         : ( min-width: 480px  ),
+  'mobile-plus'    : ( min-width: 640px  ),
+  'ipad-portrait'  : ( min-width: 768px  ),
+  'ipad-landscape' : ( min-width: 1024px ),
+  'mbp-thirteen'   : ( min-width: 1280px ),
+  'mbp-fifteen'    : ( min-width: 1440px ),
+  'retina'         : ( min-width: 2880px )
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  // If the key doesnt exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
