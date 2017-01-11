@@ -123,7 +123,8 @@ ul, li {
     z-index: 1; }
     @media (min-width: 480px) {
       .splash__logo {
-        top: 45vh; } }
+        top: 45vh;
+        width: 125px; } }
 
 .welcome {
   width: 100%;
