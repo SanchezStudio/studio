@@ -14,7 +14,7 @@ footer {
 footer p {
   font-size: 10px;
   color: #fff;
-  letter-spacing: .075em;
+  letter-spacing: .2em;
 }
 .social {
   display: block;
@@ -36,7 +36,10 @@ footer p {
     text-transform: lowercase;
     color: #fff;
     text-decoration: none;
-    transition: 400ms ease;
+    transition: opacity 600ms ease;
+    .no-touchevents &:hover {
+      opacity: .5;
+    }
     &:visited,
     &:active,
     &:focus {
