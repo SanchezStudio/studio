@@ -92,9 +92,9 @@ ul, li {
         height: 100vh;
         background-position: center 55%; } }
     .splash__item--studio {
-      background-image: url("../images/splash/bryce-splash.jpg"); }
+      background-image: url("../images/splash/splash-bryce.jpg"); }
     .splash__item--weddings {
-      background-image: url("../images/splash/kelsey-splash.jpg"); }
+      background-image: url("../images/splash/splash-kelsey.jpg"); }
     .splash__item:hover .splash__title {
       opacity: 1;
       transform: translateY(0); }

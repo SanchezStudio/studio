@@ -15,8 +15,10 @@
     "post:css": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --output $npm_package_config_css_file $npm_package_config_css_file",
     "build": "npm-run-all build:prod-js build:css post:css",
     "watch": "npm-run-all --parallel watch:js watch:scss",
-    "watch:js": "chokidar ./js/* --initial -d 10 -c 'npm run build:dev-js'",
-    "watch:scss": "chokidar ./scss/* --initial -d 10 -c 'npm run build:css'"
+    "watch:js": "onchange \"./js\" -- npm run build:dev-js",
+    "watch:scss": "onchange \"./scss\" -- npm run build:css",
+    "server": "nodemon ./src/studio.js",
+    "start": "npm-run-all --parallel server watch"
   },
   "author": "",
   "license": "ISC",
@@ -32,8 +34,8 @@
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.13.2",
-    "chokidar-cli": "^1.2.0",
     "npm-run-all": "^3.0.0",
+    "onchange": "^3.2.1",
     "properjs-hobo": "^0.3.10",
     "properjs-imageloader": "^0.3.1",
     "webpack": "^1.13.2"
