@@ -1,10 +1,11 @@
 'use strict';
 
-
+var compression = require('compression');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
+app.use(compression());
 app.use('/assets', express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
