@@ -44,6 +44,10 @@ app.get('/sitemap/:name', function(req, res) {
   });
 });
 
+app.get('/giveaway', function(req, res) {
+  res.redirect('https://sanchezstudioco.typeform.com/to/amIjkC');
+})
+
 app.listen(4000, function() {
   console.log("The frontend server is running on port 4000!");
 });
